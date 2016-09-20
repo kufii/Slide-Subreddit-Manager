@@ -184,6 +184,7 @@
 						user.subs.splice(e.newIndex, 0, sub);
 					}
 				});
+				App.sort(sortable, user);
 			}
 		},
 		save: function() {

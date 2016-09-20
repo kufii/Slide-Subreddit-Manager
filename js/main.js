@@ -115,28 +115,23 @@
 			Util.q('li.tab > a', tabs).click();
 		},
 		sort: function(sortable, user, id) {
-			try {
-				alert('sort');
-				var order = sortable.toArray();
-				var index = id ? order.indexOf(id) : 0;
-				var itemsToSort = order.slice(index);
-				itemsToSort = itemsToSort.sort(function(a, b) {
-					return a.localeCompare(b, 'en', {'sensitivity': 'base'});
-				});
-				['all', 'frontpage'].forEach(function(sub) {
-					var theIndex = itemsToSort.indexOf(sub);
-					if (theIndex > 0) {
-						itemsToSort.splice(theIndex, 1);
-						itemsToSort.splice(0, 0, sub);
-					}
-				});
-				order.splice(index, itemsToSort.length);
-				order = order.concat(itemsToSort);
-				sortable.sort(order);
-				user.subs = order;
-			} catch (e) {
-				alert(e);
-			}
+			var order = sortable.toArray();
+			var index = id ? order.indexOf(id) : 0;
+			var itemsToSort = order.slice(index);
+			itemsToSort = itemsToSort.sort(function(a, b) {
+				return a.localeCompare(b, 'en', {'sensitivity': 'base'});
+			});
+			['all', 'frontpage'].forEach(function(sub) {
+				var theIndex = itemsToSort.indexOf(sub);
+				if (theIndex > 0) {
+					itemsToSort.splice(theIndex, 1);
+					itemsToSort.splice(0, 0, sub);
+				}
+			});
+			order.splice(index, itemsToSort.length);
+			order = order.concat(itemsToSort);
+			sortable.sort(order);
+			user.subs = order;
 		},
 		loadUser: function(name) {
 			console.log('Loading ' + name);
@@ -170,7 +165,6 @@
 					sortButton.appendChild(Util.icon('sort_by_alpha'));
 					sub.appendChild(sortButton);
 					sortButton.onclick = function(e) {
-						alert('click');
 						e.stopImmediatePropagation();
 						App.sort(sortable, user, sub.dataset.id);
 					};
@@ -184,7 +178,6 @@
 						user.subs.splice(e.newIndex, 0, sub);
 					}
 				});
-				App.sort(sortable, user);
 			}
 		},
 		save: function() {

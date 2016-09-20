@@ -131,7 +131,10 @@
 					var sub = document.createElement('li');
 					sub.classList.add('collection-item');
 					sub.dataset.id = subName;
-					sub.textContent = subName;
+					var handle = Util.icon('reorder');
+					handle.classList.add('handle', 'left');
+					sub.appendChild(handle);
+					sub.appendChild(document.createTextNode(subName));
 					subList.appendChild(sub);
 					sub.onclick = function(e) {
 						sub.classList.toggle('active');
@@ -139,11 +142,11 @@
 				});
 				App.subsContainer.appendChild(subList);
 				var sortable = Sortable.create(subList, {
+					handle: '.handle',
 					onEnd: function(e) {
 						var sub = user.subs[e.oldIndex];
 						user.subs.splice(e.oldIndex, 1);
 						user.subs.splice(e.newIndex, 0, sub);
-
 					}
 				});
 

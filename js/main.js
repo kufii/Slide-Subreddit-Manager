@@ -116,6 +116,7 @@
 		},
 		sort: function(sortable, user, id) {
 			try {
+				alert('sort');
 				var order = sortable.toArray();
 				var index = id ? order.indexOf(id) : 0;
 				var itemsToSort = order.slice(index);
@@ -169,6 +170,7 @@
 					sortButton.appendChild(Util.icon('sort_by_alpha'));
 					sub.appendChild(sortButton);
 					sortButton.onclick = function(e) {
+						alert('click');
 						e.stopImmediatePropagation();
 						App.sort(sortable, user, sub.dataset.id);
 					};

@@ -14,20 +14,26 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="navbar-fixed">
+	<header class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper">
-				<ul class="right hide-on-med-and-down title">Slide Subreddit Manager</ul>
+				<div class="right hide-on-med-and-down title">Slide Subreddit Manager</div>
 				<ul class="left">
-					<li><a href="javascript:void(0)" id="load">Load</a></li>
-					<li><a href="javascript:void(0)" id="save">Save</a></li>
+					<li class="menu-item"><a href="javascript:void(0)" id="load">Load</a></li>
+					<li class="menu-item"><a href="javascript:void(0)" id="save">Save</a></li>
 				</ul>
 			</div>
 		</nav>
+	</header>
+	<div class="container">
+	<div class="row">
+		<div class="col s12" id="tabs">
+		</div>
 	</div>
-	<div id="tabs">
+	<div class="row">
+		<div class="col s12" id='subs'>
+		</div>
 	</div>
-	<div id='subs'>
 	</div>
 	<script src="js/main.js"></script>
 </body>

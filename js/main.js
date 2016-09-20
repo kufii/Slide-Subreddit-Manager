@@ -1,22 +1,6 @@
 (function() {
 	'use strict';
 
-	blockScroll = false;
-	window.addEventListener('touchstart', function(e) {
-		if (e.target.classList.contains('handle')) {
-			blockScroll = true;
-			e.preventDefault();
-		}
-	});
-	window.addEventListener('touchend', function(e) {
-		blockScroll = false;
-	});
-	window.addEventListener('touchmove', function(e) {
-		if (blockScroll) {
-			e.preventDefault();
-		}
-	});
-
 	var Util = {
 		q: function(query, context) {
 			return (context || document).querySelector(query);

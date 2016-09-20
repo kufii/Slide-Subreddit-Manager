@@ -5,6 +5,7 @@
 	window.addEventListener('touchstart', function(e) {
 		if (e.target.classList.contains('handle')) {
 			blockScroll = true;
+			e.preventDefault();
 		}
 	});
 	window.addEventListener('touchend', function(e) {

@@ -1,4 +1,5 @@
 {
+	"version": "1.0",
 	"name": "Slide Subreddit Manager",
 	"theme_color": "#EE6E73",
 	"display": "standalone"

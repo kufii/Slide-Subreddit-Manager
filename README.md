@@ -4,8 +4,8 @@ A webapp with enhanced subreddit managing for the Android app Slide For Reddit. 
 [Try it here!](https://kufii.github.io/Slide-Subreddit-Manager/)
 
 ## Links
-[Slide For Reddit Github](https://github.com/ccrama/Slide)
-[Slide For Reddit Play Store](https://play.google.com/store/apps/details?id=me.ccrama.redditslide)
+* [Slide For Reddit Github](https://github.com/ccrama/Slide)
+* [Slide For Reddit Play Store](https://play.google.com/store/apps/details?id=me.ccrama.redditslide)
 
 ## Usage
 1. In Slide, Go to Settings > Backup & Restore > Backup to File
